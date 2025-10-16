@@ -25,9 +25,7 @@ urlpatterns = [
    path('appointment/<int:appointment_id>/pay/', views.pay_appointment, name='pay_appointment'),
    path('doctor/mark-seen/<int:appointment_id>/', views.mark_seen, name='mark_seen'),
    path('submit_feedback/<int:appointment_id>/', views.submit_feedback, name='submit_feedback'),
-   # urls.py
-  
-
-  # specific doctor
+   path('doctor/edit-profile/', views.edit_doctor_profile, name='edit_doctor_profile'),
+   
    
 ]
