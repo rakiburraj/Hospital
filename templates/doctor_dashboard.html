@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{% static 'doctor_dashboard.css' %}">
 <div class="container mt-4">
     <h2>Welcome, Dr. {{ request.user.doctor.name }}</h2>
-
+<a href="{% url 'edit_doctor_profile' %}" class="btn btn-info float-end mb-3">Edit Profile</a>
     <hr>
     <h3>Set Availability</h3>
     <form method="POST">
