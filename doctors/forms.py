@@ -54,3 +54,10 @@ class PrescriptionForm(forms.ModelForm):
     class Meta:
         model = Prescription
         fields = ['prescription_image'] 
+from django import forms
+from .models import doctor
+
+class DoctorProfileForm(forms.ModelForm):
+    class Meta:
+        model = doctor
+        fields = ['name', 'specialization', 'phone_number', 'email', 'department', 'photo', 'education', 'experience', 'consultation_fee']        
