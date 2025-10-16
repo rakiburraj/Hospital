@@ -1,6 +1,6 @@
 from datetime import timezone
 from django.shortcuts import render,redirect
-from .forms import DoctorAvailabilityForm, DoctorForm, PrescriptionForm
+from .forms import DoctorAvailabilityForm, DoctorForm, PrescriptionForm,DoctorProfileForm
 from .models import DoctorAvailability, department,doctor
 from django.contrib.auth.models import User
 from django.contrib import messages
