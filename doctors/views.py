@@ -497,3 +497,16 @@ def submit_feedback(request, appointment_id):
         messages.error(request, "Invalid request.")
     
     return redirect('patient_dashboard')
+@login_required
+def edit_doctor_profile(request):
+    doc = request.user.doctor
+
+    if request.method == 'POST':
+        form = DoctorProfileForm(request.POST, request.FILES, instance=doc)
+        if form.is_valid():
+            form.save()
+            return redirect('doctor_dashboard')  # Redirect to dashboard after saving
+    else:
+        form = DoctorProfileForm(instance=doc)
+
+    return render(request, 'edit_doctor_profile.html', {'form': form})   
